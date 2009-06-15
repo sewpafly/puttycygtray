@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/17/trunk/putty-0.60/unix
+END
+uxproxy.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxproxy.c
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/17/trunk/putty-0.60/unix/Makefile.in
+END
+gtkwin.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/gtkwin.c
+END
+gtkcfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/gtkcfg.c
+END
+uxconfig.in
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxconfig.in
+END
+uxmisc.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxmisc.c
+END
+xkeysym.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/xkeysym.c
+END
+gtkdlg.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/gtkdlg.c
+END
+uxagentc.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxagentc.c
+END
+Makefile.gtk
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/17/trunk/putty-0.60/unix/Makefile.gtk
+END
+configure.ac
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/unix/configure.ac
+END
+ux_x11.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/ux_x11.c
+END
+uxgen.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxgen.c
+END
+unix.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/8/trunk/putty-0.60/unix/unix.h
+END
+xpmptcfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/xpmptcfg.c
+END
+uxpty.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxpty.c
+END
+uxplink.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxplink.c
+END
+uxnoise.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxnoise.c
+END
+uxsel.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxsel.c
+END
+uxputty.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxputty.c
+END
+uxnet.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxnet.c
+END
+uxpterm.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxpterm.c
+END
+gtkcols.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/gtkcols.c
+END
+uxser.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxser.c
+END
+uxucs.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxucs.c
+END
+uxstore.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxstore.c
+END
+uxprint.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxprint.c
+END
+xpmputty.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/xpmputty.c
+END
+gtkcols.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/unix/gtkcols.h
+END
+xpmpterm.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/xpmpterm.c
+END
+uxcfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxcfg.c
+END
+uxcons.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxcons.c
+END
+uxsftp.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxsftp.c
+END
+xpmpucfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/xpmpucfg.c
+END
+uxsignal.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/uxsignal.c
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/unix/install-sh
+END

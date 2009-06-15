@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/23/trunk/putty-0.60/windows
+END
+winproxy.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winproxy.c
+END
+putty.iss
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/putty.iss
+END
+puttygen.rc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/puttygen.rc
+END
+cygcfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/19/trunk/putty-0.60/windows/cygcfg.c
+END
+puttygen.ico
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/putty-0.60/windows/puttygen.ico
+END
+winpgen.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winpgen.c
+END
+wintime.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/wintime.c
+END
+wincons.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/wincons.c
+END
+pageant.mft
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/pageant.mft
+END
+pscp.rc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/windows/pscp.rc
+END
+putty.mft
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/putty.mft
+END
+winsftp.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winsftp.c
+END
+pageants.ico
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/putty-0.60/windows/pageants.ico
+END
+winplink.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winplink.c
+END
+winnoise.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winnoise.c
+END
+Makefile.lcc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/17/trunk/putty-0.60/windows/Makefile.lcc
+END
+puttycfg.ico
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/putty-0.60/windows/puttycfg.ico
+END
+pscp.ico
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/pscp.ico
+END
+windefs.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/windefs.c
+END
+plink.rc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/plink.rc
+END
+pageant.rc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/pageant.rc
+END
+Makefile.vc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/17/trunk/putty-0.60/windows/Makefile.vc
+END
+winhandl.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winhandl.c
+END
+winnet.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winnet.c
+END
+winctrls.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winctrls.c
+END
+winhelp.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winhelp.c
+END
+pageant.ico
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/pageant.ico
+END
+winser.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winser.c
+END
+window.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/window.c
+END
+putty.rc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/putty.rc
+END
+winucs.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winucs.c
+END
+winmisc.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winmisc.c
+END
+cygterm.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/19/trunk/putty-0.60/windows/cygterm.c
+END
+winstore.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winstore.c
+END
+winstuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winstuff.h
+END
+winprint.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winprint.c
+END
+win_res.rc2
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/win_res.rc2
+END
+win_res.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/win_res.h
+END
+winhelp.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winhelp.h
+END
+puttytel.rc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/puttytel.rc
+END
+putty.ico
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/putty.ico
+END
+wincfg.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/wincfg.c
+END
+Makefile.bor
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/17/trunk/putty-0.60/windows/Makefile.bor
+END
+Makefile.cyg
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/17/trunk/putty-0.60/windows/Makefile.cyg
+END
+winutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winutils.c
+END
+psftp.rc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/psftp.rc
+END
+rcstuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/rcstuff.h
+END
+website.url
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/website.url
+END
+puttygen.mft
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/putty-0.60/windows/puttygen.mft
+END
+windlg.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/8/trunk/putty-0.60/windows/windlg.c
+END
+winpgnt.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winpgnt.c
+END
+sizetip.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/putty-0.60/windows/sizetip.c
+END
+puttyins.ico
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/putty-0.60/windows/puttyins.ico
+END
+winpgntc.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/winpgntc.c
+END
+version.rc2
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/8/trunk/putty-0.60/windows/version.rc2
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/putty-0.60/windows/README.txt
+END

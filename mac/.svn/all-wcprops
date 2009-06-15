@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/17/trunk/putty-0.60/mac
+END
+Makefile.mpw
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/17/trunk/putty-0.60/mac/Makefile.mpw
+END
+macnoise.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macnoise.c
+END
+mkputty.mpw
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/putty-0.60/mac/mkputty.mpw
+END
+macpgkey.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macpgkey.c
+END
+mac.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/8/trunk/putty-0.60/mac/mac.c
+END
+version.r
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/version.r
+END
+mac.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/8/trunk/putty-0.60/mac/mac.h
+END
+macnet.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macnet.c
+END
+macctrls.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macctrls.c
+END
+mtcpnet.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/mtcpnet.c
+END
+macpgen.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macpgen.c
+END
+README.mac
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/README.mac
+END
+macucs.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macucs.c
+END
+macmisc.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macmisc.c
+END
+macstuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macstuff.h
+END
+macstore.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macstore.c
+END
+stricmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/stricmp.c
+END
+vsnprint.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/vsnprint.c
+END
+setfile.sh
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/setfile.sh
+END
+macdlg.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macdlg.c
+END
+macterm.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macterm.c
+END
+mac_res.r
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/mac_res.r
+END
+macpgen.r
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macpgen.r
+END
+otnet.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/8/trunk/putty-0.60/mac/otnet.c
+END
+macabout.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macabout.c
+END
+macpgrid.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macpgrid.h
+END
+macresid.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macresid.h
+END
+macevlog.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/putty-0.60/mac/macevlog.c
+END
