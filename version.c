@@ -35,7 +35,11 @@ char sshver[] = "PuTTY-cygterm-" STR(PUTTYCYG);
 
 #else
 
-char ver[] = "Unidentified build, " __DATE__ " " __TIME__;
+/*
+ * HACK: PuttyTray
+ * Hardcode Version
+ */
+char ver[] = "PuTTYCygTray 0.60 (r1), " __DATE__ " " __TIME__;
 char sshver[] = "PuTTY-Local: " __DATE__ " " __TIME__;
 
 #endif
