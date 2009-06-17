@@ -975,7 +975,7 @@ void staticicon(struct ctlpos *cp, char *stext, char *iname, int id)
    cp->ypos += r.bottom + GAPBETWEEN;
    hcontrol = doctl(cp, r, "STATIC",
          WS_CHILD | WS_VISIBLE | SS_ICON, 0, NULL, id);
-   hicon = extract_icon(iname, FALSE);
+   hicon = extract_icon((char *) iname, FALSE);
    SendMessage(hcontrol, STM_SETICON, (WPARAM) hicon, 0);
 }
 
