@@ -401,16 +401,16 @@ union control {
 	STANDARD_PREFIX;
 	char shortcut;
     } fontselect;
+    /*
+     * HACK: PuttyTray / Session Icon
+     */ 
+    struct {
+        STANDARD_PREFIX;
+        intorptr handle;
+    } icon;
+    //--------------
 };
 
-/*
- * HACK: PuttyTray / Session Icon
- */ 
-struct {
-   STANDARD_PREFIX;
-   intorptr handle;
-} icon;
-//--------------
 
 #undef STANDARD_PREFIX
 
