@@ -21,11 +21,13 @@
 #include "dialog.h"
 
 #include <commctrl.h>
+#include "PickIconDialog.h"
 
 /*
  * HACK: PuttyTray / Session Icon
  */ 
-#include "PickIconDialog.h"
+/* #include "PickIconDialog.h" */
+
 #define	ICONHEIGHT 20
 
 #define GAPBETWEEN 3
