@@ -143,6 +143,7 @@ foreach $i (@prognames) {
     } elsif ($j !~ /\./) {
       $file = "$j.c";
       $file = "$j.m" unless &findfile($file);
+      $file = "$j.cpp" unless &findfile($file);
       $depends{$j} = [$file];
       push @scanlist, $file;
     }
@@ -395,11 +396,13 @@ if (defined $makefiles{'cygwin'}) {
     "# You may also need to tell windres where to find include files:\n".
     "# RCINC = --include-dir c:\\cygwin\\include\\\n".
     "\n".
-    &splitline("CFLAGS = -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
+#    &splitline("CFLAGS = -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
+    &splitline("CFLAGS = -g -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
       " -D_NO_OLDNAMES -DNO_MULTIMON -DNO_HTMLHELP " .
 	       (join " ", map {"-I$dirpfx$_"} @srcdirs)) .
 	       "\n".
-    "LDFLAGS = -mno-cygwin -s\n".
+#    "LDFLAGS = -mno-cygwin -s\n".
+    "LDFLAGS = -mno-cygwin\n".
     &splitline("RCFLAGS = \$(RCINC) --define WIN32=1 --define _WIN32=1".
       " --define WINVER=0x0400")."\n".
     "\n".
@@ -415,7 +418,8 @@ if (defined $makefiles{'cygwin'}) {
       print &splitline($prog . ".exe: " . $objstr), "\n";
       my $mw = $type eq "G" ? " -mwindows" : "";
       $libstr = &objects($p, undef, undef, "-lX");
-      print &splitline("\t\$(CC)" . $mw . " \$(LDFLAGS) -o \$@ " .
+#      print &splitline("\t\$(CC)" . $mw . " \$(LDFLAGS) -o \$@ " .
+      print &splitline("\t\$(CC) -g" . $mw . " \$(LDFLAGS) -o \$@ " .
                        "-Wl,-Map,$prog.map " .
                        $objstr . " $libstr", 69), "\n\n";
     }
@@ -1311,6 +1315,8 @@ if (defined $makefiles{'osx'}) {
       }
       $firstdep = $d->{deps}->[0];
       if ($firstdep =~ /\.c$/) {
+	  print "\t\$(CC) \$(COMPAT) \$(FWHACK) \$(CFLAGS) \$(XFLAGS) -c \$<\n";
+      } elsif ($firstdep =~ /\.cpp$/) {
 	  print "\t\$(CC) \$(COMPAT) \$(FWHACK) \$(CFLAGS) \$(XFLAGS) -c \$<\n";
       } elsif ($firstdep =~ /\.m$/) {
 	  print "\t\$(CC) -x objective-c \$(COMPAT) \$(FWHACK) \$(CFLAGS) \$(XFLAGS) -c \$<\n";
