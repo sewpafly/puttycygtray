@@ -207,7 +207,8 @@ putty.exe: be_all_s.o cmdline.o config.o cproxy.o cygcfg.o cygterm.o \
 		tree234.o version.o wcwidth.o wildcard.o wincfg.o winctrls.o \
 		windefs.o windlg.o window.o winhandl.o winhelp.o winmisc.o \
 		winnet.o winnoise.o winpgntc.o winprint.o winproxy.o \
-		winser.o winstore.o wintime.o winucs.o winutils.o x11fwd.o
+		winser.o winstore.o wintime.o winucs.o winutils.o x11fwd.o \
+		PickIconDialog.o regexp.o urlhack.o
 	$(CC) -mwindows $(LDFLAGS) -o $@ -Wl,-Map,putty.map be_all_s.o \
 		cmdline.o config.o cproxy.o cygcfg.o cygterm.o dialog.o \
 		ldisc.o ldiscucs.o logging.o minibidi.o misc.o pinger.o \
@@ -220,8 +221,9 @@ putty.exe: be_all_s.o cmdline.o config.o cproxy.o cygcfg.o cygterm.o \
 		windlg.o window.o winhandl.o winhelp.o winmisc.o winnet.o \
 		winnoise.o winpgntc.o winprint.o winproxy.o winser.o \
 		winstore.o wintime.o winucs.o winutils.o x11fwd.o -ladvapi32 \
+		PickIconDialog.o regexp.o urlhack.o \
 		-lcomctl32 -lcomdlg32 -lgdi32 -limm32 -lshell32 -luser32 \
-		-lwinmm -lwinspool
+		-lwinmm -lwinspool -lstdc++
 
 puttygen.exe: import.o misc.o notiming.o puttygen.res.o sshaes.o sshbn.o \
 		sshdes.o sshdss.o sshdssg.o sshmd5.o sshprime.o sshpubk.o \
@@ -561,6 +563,9 @@ otnet.o: ../mac/otnet.c ../putty.h ../network.h ../mac/mac.h ../puttyps.h \
 pageant.res.o: FORCE
 	$(RC) $(RCFL) $(RCFLAGS) ../windows/pageant.rc pageant.res.o
 
+PickIconDialog.o: ../windows/PickIconDialog.c ../windows/PickIconDialog.h
+	$(CC) $(COMPAT) $(CFLAGS) $(XFLAGS) -c ../windows/PickIconDialog.c
+
 pinger.o: ../pinger.c ../putty.h ../puttyps.h ../network.h ../misc.h \
 		../windows/winstuff.h ../mac/macstuff.h ../macosx/osx.h \
 		../unix/unix.h ../puttymem.h ../tree234.h \
@@ -622,6 +627,9 @@ raw.o: ../raw.c ../putty.h ../puttyps.h ../network.h ../misc.h \
 		../unix/unix.h ../puttymem.h ../tree234.h \
 		../windows/winhelp.h ../charset/charset.h
 	$(CC) $(COMPAT) $(CFLAGS) $(XFLAGS) -c ../raw.c
+
+regexp.o: ../windows/re_lib/regexp.cpp ../windows/re_lib/regexp.h
+	$(CC) $(COMPAT) $(CFLAGS) $(XFLAGS) -c ../windows/re_lib/regexp.cpp
 
 rlogin.o: ../rlogin.c ../putty.h ../puttyps.h ../network.h ../misc.h \
 		../windows/winstuff.h ../mac/macstuff.h ../macosx/osx.h \
@@ -790,6 +798,10 @@ tree234.o: ../tree234.c ../puttymem.h ../tree234.h
 
 utf8.o: ../charset/utf8.c ../charset/charset.h ../charset/internal.h
 	$(CC) $(COMPAT) $(CFLAGS) $(XFLAGS) -c ../charset/utf8.c
+
+urlhack.o: ../windows/re_lib/regexp.h ../windows/re_lib/regexp.cpp \
+		../windows/urlhack.cpp ../windows/urlhack.h
+	$(CC) $(COMPAT) $(CFLAGS) $(XFLAGS) -c ../windows/urlhack.cpp
 
 ux_x11.o: ../unix/ux_x11.c ../putty.h ../ssh.h ../puttyps.h ../network.h \
 		../misc.h ../puttymem.h ../int64.h ../windows/winstuff.h \

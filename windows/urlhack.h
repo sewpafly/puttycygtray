@@ -14,8 +14,8 @@ typedef struct { int x0, y0, x1, y1; } text_region;
 extern "C" {
 #endif
 
-    const char* urlhack_default_regex;
-    int urlhack_mouse_old_x, urlhack_mouse_old_y, urlhack_current_region;
+    extern const char* urlhack_default_regex;
+    extern int urlhack_mouse_old_x, urlhack_mouse_old_y, urlhack_current_region;
 
     void urlhack_reset();
     void urlhack_go_find_me_some_hyperlinks(int screen_width);
