@@ -1332,7 +1332,7 @@ void setup_config_box(struct controlbox *b, int midsession,
     /** HACK: END **/
  
     s = ctrl_getset(b, "Session", "otheropts", NULL);
-    c = ctrl_radiobuttons(s, "Close window on exit:", 'w', 4,
+    c = ctrl_radiobuttons(s, "Close window on exit:", 'z', 4,
 			  HELPCTX(session_coe),
 			  dlg_stdradiobutton_handler,
 			  I(offsetof(Config, close_on_exit)),

@@ -18,6 +18,12 @@
 use FileHandle;
 use Cwd;
 
+# Add debug feature
+$debug = 0;
+foreach $arg ( @ARGV ) {
+    $debug = 1 if ( $arg =~ /^--debug$/ || $arg =~ /^-d$/);
+}
+
 open IN, "Recipe" or do {
     # We want to deal correctly with being run from one of the
     # subdirs in the source tree. So if we can't find Recipe here,
@@ -373,6 +379,8 @@ sub manpages {
 
 if (defined $makefiles{'cygwin'}) {
     $dirpfx = &dirpfx($makefiles{'cygwin'}, "/");
+    $GFLAG = ($debug) ? " -g": "";
+    $LDFLAGS = ($debug) ? "": " -s";
 
     ##-- CygWin makefile
     open OUT, ">$makefiles{'cygwin'}"; select OUT;
@@ -396,13 +404,11 @@ if (defined $makefiles{'cygwin'}) {
     "# You may also need to tell windres where to find include files:\n".
     "# RCINC = --include-dir c:\\cygwin\\include\\\n".
     "\n".
-#    &splitline("CFLAGS = -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
-    &splitline("CFLAGS = -g -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
+    &splitline("CFLAGS =$GFLAG -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
       " -D_NO_OLDNAMES -DNO_MULTIMON -DNO_HTMLHELP " .
 	       (join " ", map {"-I$dirpfx$_"} @srcdirs)) .
 	       "\n".
-#    "LDFLAGS = -mno-cygwin -s\n".
-    "LDFLAGS = -mno-cygwin\n".
+    "LDFLAGS = -mno-cygwin$LDFLAGS\n".
     &splitline("RCFLAGS = \$(RCINC) --define WIN32=1 --define _WIN32=1".
       " --define WINVER=0x0400")."\n".
     "\n".
@@ -418,10 +424,9 @@ if (defined $makefiles{'cygwin'}) {
       print &splitline($prog . ".exe: " . $objstr), "\n";
       my $mw = $type eq "G" ? " -mwindows" : "";
       $libstr = &objects($p, undef, undef, "-lX");
-#      print &splitline("\t\$(CC)" . $mw . " \$(LDFLAGS) -o \$@ " .
-      print &splitline("\t\$(CC) -g" . $mw . " \$(LDFLAGS) -o \$@ " .
-                       "-Wl,-Map,$prog.map " .
-                       $objstr . " $libstr", 69), "\n\n";
+      print &splitline("\t\$(CC)$GFLAG" . $mw . " \$(LDFLAGS) -o \$@ " .
+          "-Wl,-Map,$prog.map " .
+          $objstr . " $libstr", 69), "\n\n";
     }
     foreach $d (&deps("X.o", "X.res.o", $dirpfx, "/", "cygwin")) {
       if ($forceobj{$d->{obj_orig}}) {
