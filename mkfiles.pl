@@ -381,6 +381,7 @@ if (defined $makefiles{'cygwin'}) {
     $dirpfx = &dirpfx($makefiles{'cygwin'}, "/");
     $GFLAG = ($debug) ? " -g": "";
     $LDFLAGS = ($debug) ? "": " -s";
+    $DFLAGS = ($debug) ? " -DDEBUG": "";
 
     ##-- CygWin makefile
     open OUT, ">$makefiles{'cygwin'}"; select OUT;
@@ -404,7 +405,7 @@ if (defined $makefiles{'cygwin'}) {
     "# You may also need to tell windres where to find include files:\n".
     "# RCINC = --include-dir c:\\cygwin\\include\\\n".
     "\n".
-    &splitline("CFLAGS =$GFLAG -mno-cygwin -Wall -O2 -D_WINDOWS -DDEBUG -DWIN32S_COMPAT".
+    &splitline("CFLAGS =$GFLAG -mno-cygwin -Wall -O2 -D_WINDOWS -DWIN32S_COMPAT $DFLAGS".
       " -D_NO_OLDNAMES -DNO_MULTIMON -DNO_HTMLHELP " .
 	       (join " ", map {"-I$dirpfx$_"} @srcdirs)) .
 	       "\n".
