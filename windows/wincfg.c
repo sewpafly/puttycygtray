@@ -405,7 +405,7 @@ void win_setup_config_box(struct controlbox *b, HWND *hwndp, int has_help,
      */
     s = ctrl_getset(b, "Connection", "reconnect", "Reconnect options");
     ctrl_checkbox(s, "Attempt to reconnect on system wakeup", 'w', HELPCTX(no_help), dlg_stdcheckbox_handler, I(offsetof(Config,wakeup_reconnect)));
-    ctrl_checkbox(s, "Attempt to reconnect on connection failure", 'w', HELPCTX(no_help), dlg_stdcheckbox_handler, I(offsetof(Config,failure_reconnect)));
+    ctrl_checkbox(s, "Attempt to reconnect on connection failure", NULL, HELPCTX(no_help), dlg_stdcheckbox_handler, I(offsetof(Config,failure_reconnect)));
 
     /*
      * HACK: PuttyTray / Nutty
