@@ -110,6 +110,9 @@ cygterm_sent(Plug plug, int bufsize)
 	local->bufsize = bufsize;
 }
 
+static void
+cygterm_size(void *handle, int width, int height);
+
 static int
 cygterm_accepting(Plug plug, OSSocket sock)
 {
@@ -117,6 +120,8 @@ cygterm_accepting(Plug plug, OSSocket sock)
 	cygterm_debug("top");
 	local->s = sk_register(sock, plug);
 	sk_set_frozen(local->s, 0);
+	/* Reset terminal size */
+	cygterm_size(local, local->cfg.width, local->cfg.height);
 	cygterm_debug("OK");
 	return 0;
 }
@@ -292,6 +297,10 @@ cygterm_size(void *handle, int width, int height)
 {
 	Local local = handle;
 	cygterm_debug("top");
+	cygterm_debug("size=%d,%d (last=%d,%d)",
+	              width, height, local->cfg.width, local->cfg.height);
+	local->cfg.width = width;
+	local->cfg.height = height;
 	if (local->s) {
 		DWORD n;
 		Message m;
@@ -299,9 +308,9 @@ cygterm_size(void *handle, int width, int height)
 		m.type = MSG_RESIZE;
 		m.msg.resize.width = width;
 		m.msg.resize.height = height;
-		debug(("WriteFile %p %p:%u", local->ctl, &m, m.size));
+		cygterm_debug("WriteFile %p %p:%u", local->ctl, &m, m.size);
 		WriteFile(local->ctl, (const char *)&m, m.size, &n, 0);
-		debug(("WriteFile returns %d"));
+		cygterm_debug("WriteFile returns %d");
 	}
 }
 
@@ -447,20 +456,15 @@ getRegistry(char *valueData, LPDWORD psize, HKEY key, const char *subKey, const 
 	return ret;
 }
 
-/* As of Cygwin 1.7, this key contains the Cygwin install root. */
-#define CYGWIN_SETUP_ROOTDIR \
-    HKEY_LOCAL_MACHINE,\
+/* As of Cygwin 1.7, one of these keys contains the Cygwin install root. */
+#define CYGWIN_U_SETUP_ROOTDIR \
+	HKEY_CURRENT_USER,\
 	"Software\\Cygwin\\setup",\
 	"rootdir"
-/* Versions previous to Cygwin 1.7 use one of these keys. */
-#define CYGWIN_SYS_ROOT_MOUNT \
+#define CYGWIN_S_SETUP_ROOTDIR \
 	HKEY_LOCAL_MACHINE,\
-	"Software\\Cygnus Solutions\\Cygwin\\mounts v2\\/",\
-	"native"
-#define CYGWIN_USER_ROOT_MOUNT \
-	HKEY_CURRENT_USER,\
-	"Software\\Cygnus Solutions\\Cygwin\\mounts v2\\/",\
-	"native"
+	"Software\\Cygwin\\setup",\
+	"rootdir"
 
 static char *
 getCygwinBin(void)
@@ -471,9 +475,8 @@ getCygwinBin(void)
 	dir = smalloc(size);
 	dir[0] = '\0';
 
-	if (ERROR_SUCCESS == getRegistry(dir, &size, CYGWIN_SETUP_ROOTDIR)
-	    || ERROR_SUCCESS == getRegistry(dir, &size, CYGWIN_SYS_ROOT_MOUNT)
-	    || ERROR_SUCCESS == getRegistry(dir, &size, CYGWIN_USER_ROOT_MOUNT))
+	if (ERROR_SUCCESS == getRegistry(dir, &size, CYGWIN_U_SETUP_ROOTDIR)
+	    || ERROR_SUCCESS == getRegistry(dir, &size, CYGWIN_S_SETUP_ROOTDIR))
 	{
 		strcat(dir, "\\bin");
 	}
@@ -517,7 +520,7 @@ spawnChild(char *cmd, LPPROCESS_INFORMATION ppi, PHANDLE pin)
 	/* Create an anonymous pipe over which to send events such as resize */
 	sa.lpSecurityDescriptor = NULL;
 	sa.bInheritHandle = TRUE;
-	if (!CreatePipe(&in, pin, &sa, 0))
+	if (!CreatePipe(&in, pin, &sa, 1))
 		return "failed to create event pipe";
 
 	/* cthelper will use stdin to get event messages */

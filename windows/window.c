@@ -808,7 +808,8 @@ int WINAPI WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR cmdline, int show)
      */
     guess_width = extra_width + font_width * term->cols;
     guess_height = extra_height + font_height * term->rows;
-    SetWindowPos(hwnd, NULL, 0, 0, guess_width, guess_height, SWP_NOMOVE | SWP_NOREDRAW | SWP_NOZORDER);
+    SetWindowPos(hwnd, NULL, 0, 0, guess_width, guess_height, 
+            SWP_NOMOVE | SWP_NOREDRAW | SWP_NOZORDER);
 
     /*
      * Set up a caret bitmap, with no content.
